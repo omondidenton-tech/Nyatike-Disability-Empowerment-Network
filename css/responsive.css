@@ -1,0 +1,1081 @@
+/*1. TABLETS / SMALL LAPTOPS 1200px AND BELOW*/
+
+@media (max-width: 1200px) {
+
+    .container,
+    .hero-container {
+        width: min(100% - 40px, 1080px);
+    }
+
+    .nav-container {
+        gap: 18px;
+    }
+
+    .brand-text strong {
+        font-size: 0.82rem;
+    }
+
+    .brand-text span {
+        font-size: 0.62rem;
+    }
+
+    .nav-link,
+    .dropdown-toggle {
+        padding-inline: 7px;
+        font-size: 0.7rem;
+    }
+
+    .nav-donate {
+        padding-inline: 13px !important;
+    }
+
+    .hero-floating-card {
+        right: 20px;
+    }
+}
+
+
+/*   2. TABLETS 1024px AND BELOW*/
+
+@media (max-width: 1024px) {
+
+    :root {
+        --container: 920px;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    /* Header */
+
+    .nav-container {
+        min-height: 76px;
+    }
+
+    .brand-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .primary-nav {
+        gap: 5px;
+    }
+
+    .nav-link,
+    .dropdown-toggle {
+        min-height: 44px;
+        padding-inline: 6px;
+        font-size: 0.68rem;
+    }
+
+    .dropdown-menu {
+        width: 250px;
+    }
+
+    /*  Hero  */
+
+    .hero-v2 {
+        min-height: 650px;
+    }
+
+    .hero-container {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .hero-content {
+        max-width: 650px;
+    }
+
+    .hero-content > p {
+        font-size: 1rem;
+    }
+
+    .hero-floating-card {
+        width: 245px;
+        right: 20px;
+        bottom: 50px;
+        padding: 20px;
+    }
+
+    .hero-floating-card h2 {
+        font-size: 1.15rem;
+    }
+
+    /*  Intro  */
+
+    .intro-grid {
+        grid-template-columns: 1fr 1.25fr;
+        gap: 45px;
+    }
+
+    /*  Programmes  */
+
+    .programme-preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*  Approach  */
+
+    .approach-grid {
+        gap: 50px;
+    }
+
+    .approach-image {
+        min-height: 430px;
+    }
+
+    .approach-image img {
+        height: 430px;
+    }
+
+    .image-accent-card {
+        right: -15px;
+        bottom: -15px;
+    }
+
+    /* Involvement  */
+
+    .involvement-box {
+        padding: 50px;
+        gap: 35px;
+    }
+
+    /*  Footer  */
+
+    .footer-grid {
+        gap: 40px;
+    }
+}
+
+
+/* 3. MOBILE NAVIGATION / LARGE PHONES 900px AND BELOW*/
+
+@media (max-width: 900px) {
+
+    /*  Header  */
+
+    .nav-container {
+        position: relative;
+        min-height: 72px;
+    }
+
+    .nav-toggle {
+        display: block;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1100;
+    }
+
+    .primary-nav {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        width: 100%;
+        display: block;
+
+        max-height: calc(100vh - 73px);
+        overflow-y: auto;
+
+        padding: 12px 20px 20px;
+
+        background: var(--white);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-lg);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-8px);
+
+        transition:
+            opacity var(--transition-fast),
+            visibility var(--transition-fast),
+            transform var(--transition-fast);
+    }
+
+    .primary-nav.active,
+    .primary-nav.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-link,
+    .dropdown-toggle {
+        width: 100%;
+        min-height: 50px;
+        justify-content: space-between;
+        padding: 12px 13px;
+        border-radius: 7px;
+        font-size: 0.82rem;
+        text-align: left;
+    }
+
+    .nav-link::after,
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    .nav-link:hover,
+    .nav-link.active,
+    .dropdown-toggle:hover,
+    .dropdown-toggle[aria-expanded="true"] {
+        background: var(--light-bg);
+        color: var(--secondary);
+    }
+
+    .nav-donate {
+        width: 100%;
+        margin: 8px 0 0;
+    }
+
+    /*  Mobile Dropdown */
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        display: none;
+
+        padding: 5px 0 5px 12px;
+
+        border: 0;
+        border-left: 2px solid var(--accent);
+        border-radius: 0;
+        background: var(--off-white);
+        box-shadow: none;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: none;
+    }
+
+    .dropdown.open > .dropdown-menu,
+    .dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu li a {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+    }
+
+    .dropdown-menu li a:hover {
+        padding-left: 16px;
+    }
+
+    /*  Hero  */
+
+    .hero-v2 {
+        min-height: 620px;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(4, 28, 43, 0.94),
+                rgba(4, 28, 43, 0.75)
+            );
+    }
+
+    .hero-floating-card {
+        display: none;
+    }
+
+    .hero-content {
+        max-width: 720px;
+    }
+
+    /*  Intro  */
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .intro-heading {
+        max-width: 650px;
+    }
+
+    /*  Approach  */
+
+    .approach-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .approach-image {
+        max-width: 700px;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .approach-content {
+        max-width: 700px;
+    }
+
+    /*  Involvement  */
+
+    .involvement-box {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .involvement-actions {
+        width: 100%;
+    }
+
+    /*  Final CTA  */
+
+    .final-cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /*  Footer  */
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/*4. STANDARD MOBILE 768px AND BELOW*/
+
+@media (max-width: 768px) {
+
+    .container,
+    .hero-container {
+        width: min(100% - 32px, 680px);
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    /*  Typography */
+
+    h1 {
+        font-size: clamp(2.35rem, 9vw, 3.5rem);
+    }
+
+    h2 {
+        font-size: clamp(1.85rem, 7vw, 2.6rem);
+    }
+
+    h3 {
+        font-size: 1.12rem;
+    }
+
+    /*  Brand  */
+
+    .brand {
+        max-width: calc(100% - 65px);
+    }
+
+    .brand-logo {
+        width: 46px;
+        height: 46px;
+    }
+
+    .brand-text strong {
+        font-size: 0.78rem;
+    }
+
+    .brand-text span {
+        font-size: 0.58rem;
+    }
+
+    /*  Hero  */
+
+    .hero-v2 {
+        min-height: 600px;
+    }
+
+    .hero-container {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .hero-content h1 {
+        margin-bottom: 20px;
+    }
+
+    .hero-content > p {
+        max-width: 620px;
+        font-size: 0.96rem;
+        line-height: 1.7;
+    }
+
+    .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-note {
+        max-width: 400px;
+        font-size: 0.76rem;
+    }
+
+    /*  Section headings */
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading.centered {
+        text-align: left;
+    }
+
+    .section-heading.centered .eyebrow {
+        justify-content: flex-start;
+    }
+
+    /*  Intro  */
+
+    .intro-heading::before {
+        left: -12px;
+        height: 70px;
+    }
+
+    .intro-content p {
+        font-size: 0.96rem;
+    }
+
+    /*  Programmes  */
+
+    .programme-preview-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .programme-preview-card {
+        min-height: 230px;
+        padding: 23px;
+    }
+
+    .programme-number {
+        margin-bottom: 18px;
+    }
+
+    .programme-icon {
+        margin-bottom: 18px;
+    }
+
+    .programmes-preview .section-heading + .programme-preview-grid {
+        margin-bottom: 32px;
+    }
+
+    .programmes-preview > .container > .btn {
+        width: 100%;
+    }
+
+    /*  Approach  */
+
+    .approach-image {
+        min-height: 390px;
+    }
+
+    .approach-image img {
+        height: 390px;
+    }
+
+    .image-accent-card {
+        right: 12px;
+        bottom: -18px;
+        max-width: 220px;
+        padding: 17px;
+    }
+
+    .approach-content {
+        padding-top: 12px;
+    }
+
+    .approach-content > p {
+        font-size: 0.94rem;
+    }
+
+    /* Impact  */
+
+    .impact-preview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-highlight {
+        padding: 28px;
+    }
+
+    /*Get involved */
+
+    .involvement-box {
+        padding: 40px 28px;
+        border-radius: 16px;
+    }
+
+    .involvement-actions {
+        align-items: stretch;
+        flex-direction: column;
+        max-width: 360px;
+    }
+
+    .involvement-actions .btn {
+        width: 100%;
+    }
+
+    /* Final CTA */
+
+    .final-cta {
+        padding: 65px 0;
+    }
+
+    .final-cta .btn {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    /*  Footer */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 60px;
+        padding-bottom: 45px;
+    }
+
+    .footer-brand {
+        max-width: 500px;
+    }
+
+    .footer-bottom-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100px;
+        padding: 18px 0;
+    }
+}
+
+
+/*  5. SMALL PHONES
+   600px AND BELOW
+   */
+
+@media (max-width: 600px) {
+
+    .container,
+    .hero-container {
+        width: min(100% - 28px, 560px);
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    /*  Header  */
+
+    .nav-container {
+        min-height: 68px;
+    }
+
+    .primary-nav {
+        top: calc(100% + 1px);
+        max-height: calc(100vh - 69px);
+        padding-inline: 14px;
+    }
+
+    .brand-logo {
+        width: 43px;
+        height: 43px;
+    }
+
+    .brand-text strong {
+        font-size: 0.72rem;
+    }
+
+    .brand-text span {
+        display: none;
+    }
+
+    /*  Hero */
+
+    .hero-v2 {
+        min-height: 570px;
+    }
+
+    .hero-container {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.15rem, 11vw, 3.2rem);
+    }
+
+    .hero-content > p {
+        font-size: 0.91rem;
+    }
+
+    .hero-note {
+        align-items: flex-start;
+        line-height: 1.5;
+    }
+
+    /*  Eyebrow  */
+
+    .eyebrow {
+        font-size: 0.7rem;
+    }
+
+    .eyebrow::before {
+        width: 22px;
+    }
+
+    /*  Intro  */
+
+    .intro-heading::before {
+        display: none;
+    }
+
+    .intro-content p {
+        font-size: 0.91rem;
+    }
+
+    /*  Programme cards  */
+
+    .programme-preview-card {
+        min-height: 220px;
+        padding: 21px;
+    }
+
+    .programme-preview-card p {
+        font-size: 0.84rem;
+    }
+
+    /*  Approach  */
+
+    .approach-image {
+        min-height: 320px;
+    }
+
+    .approach-image img {
+        height: 320px;
+        border-radius: 15px;
+    }
+
+    .image-accent-card {
+        right: 8px;
+        bottom: -16px;
+        max-width: 190px;
+        padding: 14px;
+    }
+
+    .image-accent-card strong {
+        font-size: 0.82rem;
+    }
+
+    .image-accent-card span {
+        font-size: 0.7rem;
+    }
+
+    /*Impact */
+
+    .impact-highlight {
+        padding: 24px;
+    }
+
+    .impact-highlight > span {
+        margin-bottom: 18px;
+    }
+
+    .impact-highlight h3 {
+        font-size: 1.15rem;
+    }
+
+    .impact-highlight p {
+        font-size: 0.85rem;
+    }
+
+    /*  Involvement */
+
+    .involvement-box {
+        padding: 34px 22px;
+    }
+
+    .involvement-content p {
+        font-size: 0.88rem;
+    }
+
+    /*  Footer  */
+
+    .footer-logo-link img {
+        width: 72px;
+        height: 72px;
+    }
+}
+
+
+/*6. VERY SMALL PHONES
+   420px AND BELOW */
+
+@media (max-width: 420px) {
+
+    .container,
+    .hero-container {
+        width: min(100% - 24px, 396px);
+    }
+
+    .section {
+        padding: 52px 0;
+    }
+
+    /*  Header  */
+
+    .nav-container {
+        min-height: 64px;
+    }
+
+    .brand {
+        gap: 8px;
+    }
+
+    .brand-logo {
+        width: 39px;
+        height: 39px;
+    }
+
+    .brand-text strong {
+        font-size: 0.67rem;
+    }
+
+    .nav-toggle {
+        width: 43px;
+        height: 43px;
+    }
+
+    /*  Hero  */
+
+    .hero-v2 {
+        min-height: 550px;
+    }
+
+    .hero-container {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.15rem;
+    }
+
+    .hero-content > p {
+        font-size: 0.87rem;
+        line-height: 1.65;
+    }
+
+    .hero-actions {
+        max-width: none;
+    }
+
+    .hero-actions .btn {
+        min-height: 47px;
+    }
+
+    /*  Programme cards  */
+
+    .programme-preview-card {
+        min-height: 205px;
+        padding: 19px;
+    }
+
+    .programme-icon {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 15px;
+    }
+
+    /*  Approach  */
+
+    .approach-image {
+        min-height: 275px;
+    }
+
+    .approach-image img {
+        height: 275px;
+    }
+
+    .image-accent-card {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        max-width: none;
+        margin: -35px 12px 0;
+    }
+
+    /*  Impact */
+
+    .impact-highlight {
+        padding: 21px;
+    }
+
+    /*  Final CTA */
+
+    .final-cta {
+        padding: 55px 0;
+    }
+
+    /*  Footer  */
+
+    .footer-bottom-inner {
+        min-height: 90px;
+    }
+
+    .footer-bottom p,
+    .footer-bottom a {
+        font-size: 0.7rem;
+    }
+}
+
+
+/*7. LANDSCAPE PHONES*/
+
+@media (max-height: 600px) and (orientation: landscape) {
+
+    .hero-v2 {
+        min-height: 560px;
+    }
+
+    .hero-container {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .hero-floating-card {
+        display: none;
+    }
+
+    .primary-nav {
+        max-height: calc(100vh - 65px);
+    }
+}
+
+
+/*  8. TOUCH DEVICES */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .programme-preview-card:hover,
+    .impact-highlight:hover,
+    .btn:hover {
+        transform: none;
+    }
+
+    .programme-preview-card:hover::before {
+        transform: scaleX(0);
+    }
+
+    .programme-preview-card:active {
+        transform: scale(0.99);
+    }
+
+    .btn:active {
+        transform: scale(0.98);
+    }
+}
+
+
+/*  9. REDUCED MOTION*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-content,
+    .hero-floating-card,
+    .hero-note {
+        animation: none;
+    }
+
+    .approach-image img {
+        transition: none;
+    }
+
+    .programme-preview-card,
+    .programme-icon,
+    .card-arrow,
+    .btn,
+    .nav-link,
+    .dropdown-menu li a {
+        transition: none;
+    }
+}
+/* CONTACT FORM — RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .contact-form {
+        padding: 26px 22px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .contact-form {
+        padding: 22px 17px;
+        border-radius: var(--radius-md);
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .form-group input {
+        min-height: 50px;
+    }
+
+    .form-group textarea {
+        min-height: 135px;
+    }
+
+}
+/*CONTACT PAGE — RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+    .contact-options-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-form-layout {
+        gap: 50px;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .contact-form-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .contact-details-panel {
+        max-width: 750px;
+    }
+
+    .contact-form-panel {
+        max-width: 750px;
+        width: 100%;
+    }
+
+    .contact-closing-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .contact-page-intro {
+        padding: 65px 0 55px;
+    }
+
+    .contact-options-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .contact-option-card {
+        min-height: 210px;
+        padding: 23px;
+    }
+
+    .contact-form-panel {
+        padding: 28px 24px;
+    }
+
+    .contact-closing {
+        padding: 60px 0;
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .contact-options-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-option-card {
+        min-height: auto;
+    }
+
+    .contact-form-panel {
+        padding: 24px 18px;
+        border-radius: var(--radius-md);
+    }
+
+    .contact-direct-actions {
+        flex-direction: column;
+    }
+
+    .contact-direct-actions .btn {
+        width: 100%;
+    }
+
+    .contact-closing-inner .involvement-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .contact-closing-inner .btn {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .contact-page-intro {
+        padding: 55px 0 48px;
+    }
+
+    .contact-intro-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .contact-option-card {
+        padding: 21px;
+    }
+
+    .contact-form-panel {
+        padding: 22px 16px;
+    }
+
+}
+/* END OF RESPONSIVE.CSS */
